@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:19:24 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/21 16:56:33 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/21 18:59:31 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstadd_front(t_list **alst, t_list *new);
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	if (alst == NULL || *alst == NULL || new == NULL)
-		return (NULL);
+		return ;
 	new->next = *alst;
 	*alst = new;
 }

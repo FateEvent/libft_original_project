@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:52:37 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/21 17:18:56 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/21 20:27:52 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@ t_list	*ft_lstlast(t_list *lst);
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*last;
 	t_list	*current;
 
 	current = lst;
+	if (lst == NULL || current == NULL)
+		return (NULL);
 	while (current->next != NULL)
 		current = current->next;
-	current->next = last;
-	last->content = NULL;
-	last->next = NULL;
-	return (last);
+	return (current);
 }
