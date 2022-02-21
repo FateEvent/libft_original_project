@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/21 16:52:37 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/21 17:18:56 by faventur         ###   ########.fr       */
+/*   Created: 2022/02/21 17:13:51 by faventur          #+#    #+#             */
+/*   Updated: 2022/02/21 17:16:44 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst);
+int	ft_lstsize(t_list *lst);
 
-t_list	*ft_lstlast(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*last;
 	t_list	*current;
+	int		counter;
 
 	current = lst;
-	while (current->next != NULL)
+	while (current != NULL)
+	{
+		counter++;
 		current = current->next;
-	current->next = last;
-	last->content = NULL;
-	last->next = NULL;
-	return (last);
+	}
+	return (counter);
 }
