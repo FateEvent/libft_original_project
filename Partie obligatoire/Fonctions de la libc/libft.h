@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:19:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/22 12:56:41 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/22 16:53:09 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ typedef struct s_list
 size_t	ft_strlen(const char *str);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strdup(const char *src);
+void	ft_bzero(void *s, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t size);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 

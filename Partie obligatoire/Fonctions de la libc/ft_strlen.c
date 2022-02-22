@@ -6,21 +6,19 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 15:00:43 by faventur          #+#    #+#             */
-/*   Updated: 2022/01/23 15:00:43 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/22 15:23:00 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * The strlen() function calculates the length of the string s, excluding
- * the terminating null byte.
- * 
- * Return Value: The strlen() function returns the number of bytes in the
- * string s.
- */
+/*
+** The strlen() function calculates the length of the string s, excluding
+** the terminating null byte.
+** 
+** Return Value: The strlen() function returns the number of bytes in the
+** string s.
+*/
 
-#include <string.h>
-
-size_t	ft_strlen(const char *str);
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
