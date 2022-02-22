@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 13:10:54 by faventur          #+#    #+#             */
-/*   Updated: 2022/01/23 13:10:54 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/22 13:45:40 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	ft_memset (char *s, int c, size_t n)
 		i++;
 		n--;
 	}
-	str[i] = '\0';
 }
 
 size_t	ft_strlen(const char *str)
