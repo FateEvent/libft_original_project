@@ -6,19 +6,19 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 21:49:58 by faventur          #+#    #+#             */
-/*   Updated: 2022/01/30 21:49:58 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/23 11:45:44 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * The isdigit() function checks whether c, which must have the value
- * of an unsigned char or EOF, is a digit (0 through 9).
- * 
- * Return Value: The values returned are nonzero if the character c
- * falls into the tested class, and a zero value if not.
- */
+/*
+** The isdigit() function checks whether c, which must have the value
+** of an unsigned char or EOF, is a digit (0 through 9).
+** 
+** Return Value: The values returned are nonzero if the character c
+** falls into the tested class, and a zero value if not.
+*/
 
-int	ft_isdigit(int c);
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

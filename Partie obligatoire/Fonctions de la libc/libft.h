@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:19:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/22 16:53:09 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/23 11:48:51 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+int		ft_isascii(int c);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 size_t	ft_strlen(const char *str);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strdup(const char *src);
