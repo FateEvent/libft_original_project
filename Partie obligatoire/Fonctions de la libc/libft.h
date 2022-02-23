@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:19:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/23 12:41:28 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/23 14:35:39 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+// Libc standard functions
 int		ft_isascii(int c);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -45,4 +46,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t size);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
+// Supplementary functions
+// Bonus functions
+// Extras
 #endif
