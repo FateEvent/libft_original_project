@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/23 12:38:44 by faventur          #+#    #+#             */
+/*   Updated: 2022/02/23 12:40:06 by faventur         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 ** The strdup() function returns a pointer to a new string which is a
 ** duplicate of the string s. Memory for the new string is obtained
