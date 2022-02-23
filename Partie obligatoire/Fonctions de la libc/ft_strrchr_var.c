@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 14:42:55 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/23 17:28:39 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/23 17:33:05 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,6 @@
 */
 
 #include "libft.h"
-
-#include <stdio.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	counter;
-
-	counter = 0;
-	if (str == NULL)
-		return (0);
-	while (*str != '\0')
-	{
-		counter++;
-		str++;
-	}
-	return (counter);
-}
 
 char	*ft_strrchr(const char *str, int c)
 {
@@ -60,12 +43,4 @@ char	*ft_strrchr(const char *str, int c)
 			return (&ret[len]);
 	}
 	return (NULL);
-}
-
-int	main()
-{
-	char *ty = "magnifaiq";
-	char *io = ft_strrchr(ty, '\0');
-	printf("ft, %s\n", io);
-	printf("reel, %s\n", strrchr(ty, '\0'));
 }
