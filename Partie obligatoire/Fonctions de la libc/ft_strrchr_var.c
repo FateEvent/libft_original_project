@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr_var.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 14:42:55 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/23 17:08:06 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/23 17:28:39 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 */
 
 #include "libft.h"
+
+#include <stdio.h>
 
 size_t	ft_strlen(const char *str)
 {
@@ -39,26 +41,31 @@ size_t	ft_strlen(const char *str)
 
 char	*ft_strrchr(const char *str, int c)
 {
-	char	letter;
 	char	*ret;
+	char	letter;
+	int		len;
 
+	ret = (char *)str;
 	letter = (char)c;
-	ret = str;
+	len = ft_strlen(str);
 	if (letter == '\0')
 	{
-		while (*str)
-			str++;
-		return (str);
+		while (*ret)
+			ret++;
+		return (ret);
 	}
-	while (*str)
+	while (ret[--len])
 	{
-		if (*str == letter)
-		{
-			ret = str;
-			str++;
-		}
-		else
-			str++;
+		if (ret[len] == letter)
+			return (&ret[len]);
 	}
-	return (ret);
+	return (NULL);
+}
+
+int	main()
+{
+	char *ty = "magnifaiq";
+	char *io = ft_strrchr(ty, '\0');
+	printf("ft, %s\n", io);
+	printf("reel, %s\n", strrchr(ty, '\0'));
 }
