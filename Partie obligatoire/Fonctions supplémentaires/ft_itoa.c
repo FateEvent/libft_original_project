@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:28:54 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/24 19:02:26 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/24 19:06:55 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 #include "libft.h"
 
-int	len_calculator(int n)
+static int	len_calculator(int n)
 {
 	int	i;
 
@@ -36,7 +36,7 @@ int	len_calculator(int n)
 	return (i);
 }
 
-char	*ft_rev_str(char *res)
+static char	*ft_rev_str(char *res)
 {
 	int		start;
 	int		end;

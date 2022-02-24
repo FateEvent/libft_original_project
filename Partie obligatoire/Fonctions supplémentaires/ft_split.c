@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:21:03 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/24 16:29:41 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/24 19:04:30 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 */
 
 #include "libft.h"
-
-char	**ft_strsplit(char const *s, char c);
 
 static int	ft_check_charset(char c, char set)
 {
