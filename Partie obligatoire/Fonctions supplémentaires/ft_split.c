@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:21:03 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/24 11:11:40 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/24 16:29:41 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c);
+char	**ft_strsplit(char const *s, char c);
 
 static int	ft_check_charset(char c, char set)
 {
@@ -29,10 +29,10 @@ static int	ft_check_charset(char c, char set)
 	return (0);
 }
 
-static int	ft_word_counter(const char *s, char *set)
+static int	ft_word_counter(const char *s, char set)
 {
-	int	counter;
-	char *str;
+	int		counter;
+	char	*str;
 
 	counter = 0;
 	str = (char *)s;
@@ -40,73 +40,62 @@ static int	ft_word_counter(const char *s, char *set)
 	{
 		if (!ft_check_charset(*str, set) && ft_check_charset(*(str + 1), set))
 			counter++;
+		str++;
 	}
 	return (counter);
 }
 
-static char	*ft_trim_and_copy(char *dest, const char *src, const char *set)
+static int	let_count(char *str, char set, int *index)
 {
-	size_t	i;
-	size_t	j;
+	int	j;
 
-	i = 0;
 	j = 0;
-	while (src[i] && ft_check_charset(src[i], set))
-		i++;
-	while (src[i] != '\0')
+	while (ft_check_charset(str[*index], set))
+		(*index)++;
+	while (str[*index] && !ft_check_charset(str[*index], set))
 	{
-		if (ft_check_charset(src[i], set)
-			&& (ft_check_charset(src[i + 1], set) || src[i + 1] == '\0'))
-		{
-			dest[j] = '\0';
-			return (dest);
-		}
-		else
-			dest[j] = src[i];
 		j++;
-		i++;
+		(*index)++;
 	}
-	return (dest);
+	return (j);
 }
 
-static size_t	ft_trim_and_count(const char *s, const char *set)
+static char	*ft_word_split(char	*newstr, char *str, char set, int *index)
 {
-	size_t	i;
-	size_t	counter;
+	int		j;
 
-	i = 0;
-	counter = 0;
-	while (s[i] && ft_check_charset(s[i], set))
-		i++;
-	while (s[i] != '\0')
-	{
-		if (ft_check_charset(s[i], set)
-			&& (ft_check_charset(s[i + 1], set) || s[i + 1] == '\0'))
-			return (counter);
-		else
-			counter++;
-		i++;
-	}
-	return (counter);
-}
-
-char	*ft_strtrim(const char *s, const char *set)
-{
-	char	*copy;
-	size_t	len;
-
-	len = ft_trim_and_count(s, set);
-	copy = (char *)malloc(sizeof(char) * (len + 1));
-	if (copy == NULL)
-		return (NULL);
-	ft_trim_and_copy(copy, s, set);
-	return (copy);
+	j = 0;
+	while (ft_check_charset(str[*index], set))
+		(*index)++;
+	while (str[*index] && !ft_check_charset(str[*index], set))
+		newstr[j++] = str[(*index)++];
+	newstr[j] = '\0';
+	return (newstr);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**strtab;
+	char	*str;
+	int		i;
+	int		j;
+	int		k;
 
-	strtab = (char **)malloc(sizeof(char *) * ft_word_counter(s, c) + 1);
-	while()
+	strtab = (char **)malloc(sizeof(char *) * (ft_word_counter(s, c) + 1));
+	if (!strtab)
+		return (NULL);
+	str = (char *)s;
+	i = 0;
+	j = 0;
+	k = 0;
+	while (k < ft_word_counter(s, c))
+	{
+		strtab[k] = (char *)malloc(sizeof(char) * (let_count(str, c, &i) + 1));
+		if (!strtab[k])
+			return (NULL);
+		ft_word_split(strtab[k], str, c, &j);
+		k++;
+	}
+	strtab[k] = NULL;
+	return (strtab);
 }
