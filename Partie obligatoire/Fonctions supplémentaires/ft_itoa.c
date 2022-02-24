@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:28:54 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/05 16:28:54 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/24 16:55:41 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** the allocation fails, the function returns NULL.
 */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int		ft_strlen(char *str);
 void	ft_rev_str(char *str);
