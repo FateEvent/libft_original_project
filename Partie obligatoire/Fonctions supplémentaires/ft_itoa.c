@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:28:54 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/24 16:55:41 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/24 19:02:26 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,76 +19,61 @@
 
 #include "libft.h"
 
-int		ft_strlen(char *str);
-void	ft_rev_str(char *str);
-int		ft_from_n_to_strlen(int n);
-char	*ft_itoa(int n);
-
-void	ft_rev_str(char *str)
+int	len_calculator(int n)
 {
-	char	temp;
-	int		start;
-	int		end;
-	int		zero_room;
-
-	start = 0;
-	end = ft_strlen(str) - 1;
-	zero_room = ft_strlen(str);
-	while (start < end)
-	{
-		temp = str[start];
-		str[start] = str[end];
-		str[end] = temp;
-		start++;
-		end--;
-	}
-	str[zero_room] = '\0';
-}
-
-int	ft_strlen(char *str)
-{
-	int i;
+	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	if (n < 0)
+		n *= -1;
+	if (n == 0)
+		return (1);
+	while (n)
+	{
+		n /= 10;
 		i++;
+	}
 	return (i);
 }
 
-int	ft_from_n_to_strlen(int n)
+char	*ft_rev_str(char *res)
 {
-	int	len;
+	int		start;
+	int		end;
+	char	temp;
 
-	len = 0;
-	while (n > 0)
+	start = 0;
+	end = ft_strlen(res) - 1;
+	while (start < end)
 	{
-		len++;
-		n /= 10;
+		temp = res[start];
+		res[start] = res[end];
+		res[end] = temp;
+		start++;
+		end--;
 	}
-	return (len);
+	return (res);
 }
 
 char	*ft_itoa(int n)
 {
+	char	*res;
 	int		i;
-	int		sign;
-	char	*s;
-	int		s_len;
+	int		x;
 
+	res = (char *)malloc(sizeof(char) * (len_calculator(n) + 1));
 	i = 0;
-	sign = n;
-	s = (char *)malloc(sizeof(char) * (s_len + 1));
-	if (sign < 0)
-		n = -n;
-	s_len = ft_from_n_to_strlen(n);
-	while (n > 0)
+	x = n;
+	if (n < 0)
+		x = -x;
+	while (i < len_calculator(n))
 	{
-		s[i++] = n % 10 + '0';
-		n /= 10;
+		res[i++] = 48 + (x % 10);
+		x /= 10;
 	}
-	if (sign < 0)
-		s[i++] = '-';
-	s[i] = '\0';
-	ft_rev_str(s);
-	return (s);
+	if (n < 0)
+		res[i++] = '-';
+	res[i] = '\0';
+	ft_rev_str(res);
+	return (res);
 }
