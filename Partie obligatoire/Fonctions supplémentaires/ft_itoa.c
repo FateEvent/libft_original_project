@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:28:54 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/25 12:36:43 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 15:47:27 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static char	*ft_rev_str(char *res)
 	return (res);
 }
 
-static char	*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int			i;
 	long int	x;
