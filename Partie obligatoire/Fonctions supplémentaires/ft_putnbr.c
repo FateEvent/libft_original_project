@@ -6,14 +6,11 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 10:35:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/01/25 10:35:34 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 18:42:45 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c);
-void	ft_putnbr(int nb);
+#include "libft.h"
 
 void	ft_putnbr(int nb)
 {
@@ -34,9 +31,4 @@ void	ft_putnbr(int nb)
 		else
 			ft_putchar(nb + '0');
 	}
-}
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
 }

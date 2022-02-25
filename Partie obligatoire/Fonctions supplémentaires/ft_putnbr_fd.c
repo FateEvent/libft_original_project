@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 10:35:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/01/25 10:35:34 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 18:41:02 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/*
+** The putnbr_fd() function writes an integer on the file descriptor.
+*/
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putnbr(int nb, int fd);
+#include "libft.h"
 
 void	ft_putnbr(int nb, int fd)
 {
@@ -39,12 +40,4 @@ void	ft_putnbr(int nb, int fd)
 				ft_putchar_fd(nb + '0', fd);
 		}
 	}
-}
-
-void	ft_putchar_fd(char c, int fd)
-{
-	if (fd >= 0 && fd <= 2)
-		write(fd, &c, 1);
-	else
-		return ;
 }

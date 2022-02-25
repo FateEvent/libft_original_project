@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:19:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/25 17:57:21 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 18:43:29 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,14 @@ char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *str, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int nb, int fd);
+void	ft_putchar(char c);
+void	ft_putstr(char const *str);
+void	ft_putendl(char const *s);
+void	ft_putnbr(int nb);
 
 // Bonus functions
 #endif

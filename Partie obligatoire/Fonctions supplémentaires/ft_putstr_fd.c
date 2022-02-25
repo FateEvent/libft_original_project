@@ -6,22 +6,15 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 11:13:40 by faventur          #+#    #+#             */
-/*   Updated: 2022/01/25 11:13:40 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 18:26:21 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/*
+** The ft_putstr_fd() function writes a string on the file descriptor. 
+*/
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char const *str, int fd);
-
-void	ft_putchar_fd(char c, int fd)
-{
-	if (fd >= 0 && fd <= 2)
-		write(fd, &c, 1);
-	else
-		return ;
-}
+#include "libft.h"
 
 void	ft_putstr_fd(char const *str, int fd)
 {
