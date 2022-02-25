@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 18:04:44 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/25 18:05:29 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 18:12:05 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_striter(char *s, void (*f)(char *))
 		return ;
 	while (s[i] && s[i] != '\0')
 	{
-		f(&s);
+		f(&s[i]);
 		i++;
 	}
 }
