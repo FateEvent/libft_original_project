@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:19:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/24 19:06:16 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 16:37:50 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,10 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(char const *s, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+
+char	*ft_strmap(char const *s, char (*f)(char));
+
+void	ft_striter(char *s, void (*f)(char *));
 
 // Bonus functions
 #endif

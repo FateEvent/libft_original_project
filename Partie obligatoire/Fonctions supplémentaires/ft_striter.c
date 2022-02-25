@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 18:04:44 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/03 18:04:44 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 17:14:02 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,14 @@
 ** to the f function so that it may be modified if necessary.
 */
 
-void	ft_striter(char *s, void (*f)(char *));
+#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	if (!s || !f)
 		return ;
-	while (s[i] && s[i] != '\0')
-	{
-		f(&s[i]);
-		i++;
-	}
+	f(s);
 }

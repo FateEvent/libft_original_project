@@ -7,28 +7,12 @@
 
 #include <stdlib.h>
 
-size_t	ft_strlen(const char *str);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	counter;
-
-	counter = 0;
-	if (str == NULL)
-		return (0);
-	while (*str != '\0')
-	{
-		counter++;
-		str++;
-	}
-	return (counter);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
-	int		len;
+	size_t	len;
 	char	*str;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 20:12:05 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/03 20:12:05 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 17:15:06 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,12 @@
 ** malloc(3)) resulting from the successive applications of f.
 */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *str);
-char	*ft_strmap(char const *s, char (*f)(char));
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	counter;
-
-	counter = 0;
-	if (str == NULL)
-		return (0);
-	while (*str != '\0')
-	{
-		counter++;
-		str++;
-	}
-	return (counter);
-}
+#include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
 	size_t	i;
-	int		len;
+	size_t	len;
 	char	*str;
 
 	i = 0;
