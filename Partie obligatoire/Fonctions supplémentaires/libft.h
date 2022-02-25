@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:19:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/25 18:43:29 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 19:04:20 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,11 @@ int		ft_atoi(const char *nptr);
 char	*ft_strdup(const char *src);
 
 // Extra functions
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(char const *s, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
-
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striter(char *s, void (*f)(char *));
@@ -73,6 +73,13 @@ void	ft_putchar(char c);
 void	ft_putstr(char const *str);
 void	ft_putendl(char const *s);
 void	ft_putnbr(int nb);
+char	*ft_strnew(size_t size);
+void	ft_strclear(char *s);
+void	ft_strdel(char **as);
+int		ft_strequ(const char *s1, const char *s2);
+int		ft_strnequ(const char *s1, const char *s2, size_t n);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
 
 // Bonus functions
 #endif

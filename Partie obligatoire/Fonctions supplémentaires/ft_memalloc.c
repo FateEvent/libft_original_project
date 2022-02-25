@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 14:05:29 by faventur          #+#    #+#             */
-/*   Updated: 2022/01/31 14:05:29 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 19:09:22 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,53 +18,15 @@
 ** Return Value: The function returns the allocated zone of memory.
 */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *str);
-void	ft_bzero (void *s, size_t n);
-void	*ft_memalloc(size_t size);
+#include "libft.h"
 
 void	*ft_memalloc(size_t size)
 {
-	void	*room;
+	unsigned char	*room;
 
-	room = malloc (size * sizeof(void *) + 1);
+	room = (unsigned char *)malloc(sizeof(unsigned char) * (size));
 	if (room == NULL)
 		return (NULL);
-	ft_bzero(room, size + 1);
-	return (room);
-}
-
-void	ft_bzero (void *s, size_t n)
-{
-	size_t	len;
-	size_t	i;
-	char	*str;
-
-	str = (char *)s;
-	len = ft_strlen(str);
-	i = 0;
-	if (n > len)
-		return ;
-	while (n > 0)
-	{
-		str[i] = '\0';
-		i++;
-		n--;
-	}
-}
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	counter;
-
-	counter = 0;
-	if (str == NULL)
-		return (0);
-	while (*str != '\0')
-	{
-		counter++;
-		str++;
-	}
-	return (counter);
+	ft_bzero(room, size);
+	return ((void *)room);
 }

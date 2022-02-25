@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:35:25 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/02 11:35:25 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 18:55:57 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** otherwise it returns 0.
 */
 
-int ft_strequ(const char *s1, const char *s2);
+#include "libft.h"
 
 int	ft_strequ(const char *s1, const char *s2)
 {

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/25 18:58:31 by faventur          #+#    #+#             */
+/*   Updated: 2022/02/25 18:58:33 by faventur         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 ** The ft_strnequ() function compares lexicographically n characters of the
 ** two strings passed as parameters.
@@ -6,9 +18,7 @@
 ** otherwise it returns 0.
 */
 
-#include <string.h>
-
-int ft_strnequ(const char *s1, const char *s2, size_t n);
+#include "libft.h"
 
 int	ft_strnequ(const char *s1, const char *s2, size_t n)
 {

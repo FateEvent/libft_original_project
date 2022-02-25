@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 11:17:51 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/02 11:17:51 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 18:56:17 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ** of the string passed as a parameter.
 */
 
-void	ft_strclear(char *s);
+#include "libft.h"
 
 void	ft_strclear(char *s)
 {

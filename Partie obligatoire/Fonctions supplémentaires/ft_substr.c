@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 12:06:45 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/02 12:06:45 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 18:54:44 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,16 @@
 ** returns a NULL pointer.
 */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len);
-
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	i;
 
 	i = 0;
 	substr = (char *)malloc(sizeof(char) * (len + 1));
-	if (substr = NULL)
+	if (substr == NULL)
 		return (NULL);
 	while (i < len)
 		substr[i++] = s[start++];
