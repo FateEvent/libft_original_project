@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/25 17:56:31 by faventur          #+#    #+#             */
+/*   Updated: 2022/02/25 18:07:07 by faventur         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 ** The ft_strmap() function applies the f function to every character of
 ** the string passed as a parameter by precising its index in order to
@@ -5,9 +17,7 @@
 ** successive applications of f.
 */
 
-#include <stdlib.h>
-
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
