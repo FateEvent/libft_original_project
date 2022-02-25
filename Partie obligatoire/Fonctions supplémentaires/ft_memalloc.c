@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 14:05:29 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/25 19:09:22 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/25 19:34:49 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memalloc(size_t size)
 {
 	unsigned char	*room;
 
-	room = (unsigned char *)malloc(sizeof(unsigned char) * (size));
+	room = (unsigned char *)malloc(size);
 	if (room == NULL)
 		return (NULL);
 	ft_bzero(room, size);
