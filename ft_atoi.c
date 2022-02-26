@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 20:54:51 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 14:12:14 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 21:50:48 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int		i;
-	int		counter;
-	long	res;
+	int			i;
+	int			counter;
+	size_t		res;
 
 	i = 0;
 	counter = 0;
