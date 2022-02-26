@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclear.c                                      :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/02 11:17:51 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/25 18:56:17 by faventur         ###   ########.fr       */
+/*   Created: 2021/11/27 12:18:18 by faventur          #+#    #+#             */
+/*   Updated: 2022/02/26 12:04:47 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The ft_strclear() function assigns the zero value '\0' to every character
-** of the string passed as a parameter.
+** The memcpy() function copies n bytes from memory area src to memory
+** area dest. The memory areas must not overlap. Use memmove(3) if the
+** memory areas do overlap.
+** 
+** Return Value: The memcpy() function returns a pointer to dest.
 */
 
 #include "libft.h"
 
-void	ft_strclear(char *s)
+void	*ft_memcpy(void *dst, const void *src, size_t size)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	if (!dst && !src)
+		return (NULL);
+	while (size--)
 	{
-		s[i] = '\0';
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
-	return (s);
+	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 10:35:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/25 18:41:02 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 11:26:36 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "libft.h"
 
-void	ft_putnbr(int nb, int fd)
+void	ft_putnbr_fd(int nb, int fd)
 {
 	if (fd < 0 || fd > 2)
 		return ;
@@ -33,8 +33,8 @@ void	ft_putnbr(int nb, int fd)
 			}
 			if (nb >= 10)
 			{
-				ft_putnbr(nb / 10, fd);
-				ft_putnbr(nb % 10, fd);
+				ft_putnbr_fd(nb / 10, fd);
+				ft_putnbr_fd(nb % 10, fd);
 			}
 			else
 				ft_putchar_fd(nb + '0', fd);

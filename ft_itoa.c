@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:28:54 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/25 15:47:27 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 11:25:04 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,9 @@ static int	len_calculator(int n)
 		i = 1;
 	while (n != 0)
 	{
-		printf("%d\n", n);
 		n /= 10;
 		i++;
 	}
-	printf("i %d\n", i);
 	return (i);
 }
 

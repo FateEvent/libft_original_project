@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 13:10:54 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/22 17:29:14 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 11:51:52 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
+	unsigned char	*str;
+
+	str = (unsigned char *)s;
 	while (n--)
-		*(unsigned char *)s++ = (unsigned char)c;
+		*str++ = (unsigned char)c;
 	return (s);
 }
