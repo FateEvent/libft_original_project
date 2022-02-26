@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:47:21 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 11:18:29 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 18:56:00 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,17 @@
 
 int	ft_isprint(int c)
 {
-	unsigned char	letter;
-
-	letter = (unsigned char)c;
-	if (letter >= 65 && letter <= 90)
+	if (c >= 65 && c <= 90)
 		return (1);
-	else if (letter >= 97 && letter <= 122)
+	else if (c >= 97 && c <= 122)
 		return (2);
-	else if (letter >= 48 && letter <= 57)
+	else if (c >= 48 && c <= 57)
 		return (4);
-	else if ((letter >= 33 && letter <= 47) || (letter >= 58 && letter <= 64)
-		|| (letter >= 91 && letter <= 96)
-		|| (letter >= 123 && letter <= 126))
+	else if ((c >= 33 && c <= 47) || (c >= 58 && c <= 64)
+		|| (c >= 91 && c <= 96)
+		|| (c >= 123 && c <= 126))
 		return (16);
-	else if (letter == 32)
+	else if (c == 32)
 		return (64);
 	else
 		return (0);

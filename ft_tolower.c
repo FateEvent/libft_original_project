@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 23:11:19 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/23 11:49:34 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 19:01:26 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,10 @@
 
 int	ft_tolower(int c)
 {
-	unsigned char	letter;
-
-	letter = (unsigned char)c;
-	if (letter >= 'A' && letter <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 	{
-		letter += 32;
-		return ((int)letter);
+		c += 32;
+		return (c);
 	}
 	else
 		return (c);

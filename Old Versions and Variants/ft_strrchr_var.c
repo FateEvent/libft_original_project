@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 14:42:55 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/23 18:05:47 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 19:28:06 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,25 +22,17 @@
 
 #include "libft.h"
 
-static char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-	char	*ret;
-	char	letter;
-	int		len;
+	int	len;
 
-	ret = (char *)str;
-	letter = (char)c;
 	len = ft_strlen(str);
-	if (letter == '\0')
+	while (len >= 0)
 	{
-		while (*ret)
-			ret++;
-		return (ret);
-	}
-	while (ret[--len])
-	{
-		if (ret[len] == letter)
-			return (&ret[len]);
+		if (str[len] == c)
+			return ((char *)str + len);
+		else
+			len--;
 	}
 	return (NULL);
 }

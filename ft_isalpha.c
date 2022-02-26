@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 21:36:26 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 13:01:14 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 18:58:20 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@
 
 int	ft_isalpha(int c)
 {
-	if ((unsigned char)c >= 65 && (unsigned char)c <= 90)
+	if (c >= 65 && c <= 90)
 		return (1);
-	else if ((unsigned char)c >= 97 && (unsigned char)c <= 122)
+	else if (c >= 97 && c <= 122)
 		return (2);
 	else
 		return (0);

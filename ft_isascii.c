@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:04:27 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 13:02:41 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 18:55:22 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 int	ft_isascii(int c)
 {
-	if ((unsigned char)c >= 0 && (unsigned char)c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);

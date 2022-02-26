@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 23:31:36 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/23 19:36:41 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 19:12:16 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static size_t	ft_trim_and_count(char const *s)
 	return (counter);
 }
 
-static char	*ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
 	char	*copy;
 	size_t	len;

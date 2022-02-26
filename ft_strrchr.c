@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 14:42:55 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 13:32:04 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 19:31:47 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,9 @@ char	*ft_strrchr(const char *str, int c)
 	char	*ret;
 
 	ret = (char *)str;
-	if ((char)c == '\0')
+	while (*str != '\0')
 	{
-		while (*str)
-			str++;
-		return ((char *)str);
-	}
-	while (*str)
-	{
-		if (*str == (char)c)
+		if (*str == c)
 		{
 			ret = (char *)str;
 			str++;
