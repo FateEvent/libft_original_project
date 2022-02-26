@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 19:25:59 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/25 19:50:32 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 13:26:32 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	unsigned char	*room;
 
 	room = (unsigned char *)malloc(nmemb * size);
-	if (!room || nmemb == 0 || size == 0)
+	if (!room)
 		return (NULL);
 	ft_bzero(room, nmemb * size);
 	return ((void *)room);

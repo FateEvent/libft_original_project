@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 14:42:55 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 11:22:24 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 13:32:04 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,10 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	char	letter;
 	char	*ret;
 
-	letter = (char)c;
 	ret = (char *)str;
-	if (letter == '\0')
+	if ((char)c == '\0')
 	{
 		while (*str)
 			str++;
@@ -37,7 +35,7 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	while (*str)
 	{
-		if (*str == letter)
+		if (*str == (char)c)
 		{
 			ret = (char *)str;
 			str++;

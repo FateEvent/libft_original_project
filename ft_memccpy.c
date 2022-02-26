@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 14:01:35 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/23 12:37:47 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 13:29:21 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,23 +22,17 @@
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char	*s1;
-	unsigned char	*s2;
-	unsigned char	symbol;
-	size_t			i;
+	size_t	i;
 
-	s1 = (unsigned char *)src;
-	s2 = (unsigned char *)dest;
-	symbol = (unsigned char)c;
 	i = 0;
-	while (i < n)
+	while (n--)
 	{
-		s2[i] = s1[i];
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		if (((unsigned char *)src)[i] == (unsigned char)c)
+			return (dst);
 		i++;
-		if (s1[i] == symbol)
-			return (dest);
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 20:12:05 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/25 17:15:06 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 13:54:14 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	i = 0;
 	len = ft_strlen(s);
 	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
 	while (s[i] && s[i] != '\0')
 	{
 		str[i] = (*f)(s[i]);

@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 16:29:35 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/23 18:58:24 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/26 14:16:42 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	if (str_len < find_len)
 		return (NULL);
-	while (i <= str_len - find_len && i < len)
+	while (i <= str_len - find_len && i <= len)
 	{
 		j = 0;
 		while (j < find_len)
