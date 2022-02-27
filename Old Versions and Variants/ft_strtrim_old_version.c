@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 23:31:36 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/27 18:21:14 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/27 18:29:04 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ static char	*ft_trim_and_copy(char *dest, char const *src)
 	len = ft_strlen(src) - 1;
 	while (src[i] && (src[i] == ' ' || src[i] == '\n' || src[i] == '\t'))
 		i++;
-	while (src[len] && (src[len] == ' ' || src[len] == '\n' || src[len] == '\t'))
+	while (src[len] && (src[len] == ' '
+			|| src[len] == '\n' || src[len] == '\t'))
 		len--;
 	while (i <= len)
 	{
