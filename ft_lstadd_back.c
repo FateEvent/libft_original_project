@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/21 17:13:51 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/21 20:14:40 by faventur         ###   ########.fr       */
+/*   Created: 2022/02/21 16:52:37 by faventur          #+#    #+#             */
+/*   Updated: 2022/02/27 19:54:58 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst);
-
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	t_list	*current;
-	int		counter;
-
-	current = lst;
-	counter = 0;
-	if (lst == NULL || current == NULL)
-		return (-1);
-	while (current != NULL)
-	{
-		counter++;
-		write(1, "1a", 2);
-		current = current->next;
-	}
-	return (counter);
+	if (alst == NULL || *alst == NULL || new == NULL)
+		return ;
+	new->next = NULL;
+	*alst = new;
 }
