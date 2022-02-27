@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 12:06:45 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/27 16:00:38 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/27 17:09:11 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (start >= ft_strlen(s))
+	{
+		substr = (char *)malloc(sizeof(char) * 1);
+		substr[0] = '\0';
+		return (substr);
+	}
 	substr = (char *)malloc(sizeof(char) * (len + 1));
-	if (substr == NULL || start >= ft_strlen(s))
+	if (substr == NULL)
 		return (NULL);
 	while (i < len)
 		substr[i++] = s[start++];

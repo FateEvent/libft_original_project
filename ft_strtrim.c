@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 23:31:36 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/23 20:41:36 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/27 18:09:39 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,45 +39,43 @@ static int	ft_check_charset(char c, const char *set)
 
 static char	*ft_trim_and_copy(char *dest, const char *src, const char *set)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	j;
+	int	len;
 
 	i = 0;
 	j = 0;
+	len = ft_strlen(src) - 1;
 	while (src[i] && ft_check_charset(src[i], set))
 		i++;
-	while (src[i] != '\0')
+	while (src[len] && ft_check_charset(src[len], set))
+		len--;
+	while (i < len)
 	{
-		if (ft_check_charset(src[i], set)
-			&& (ft_check_charset(src[i + 1], set) || src[i + 1] == '\0'))
-		{
-			dest[j] = '\0';
-			return (dest);
-		}
-		else
-			dest[j] = src[i];
+		dest[j] = src[i];
 		j++;
 		i++;
 	}
+	dest[j] = '\0';
 	return (dest);
 }
 
 static size_t	ft_trim_and_count(const char *s, const char *set)
 {
-	size_t	i;
-	size_t	counter;
+	int	i;
+	int	counter;
+	int	len;
 
 	i = 0;
 	counter = 0;
+	len = ft_strlen(s) - 1;
 	while (s[i] && ft_check_charset(s[i], set))
 		i++;
-	while (s[i] != '\0')
+	while (s[len] && ft_check_charset(s[len], set))
+		len--;
+	while (i < len)
 	{
-		if (ft_check_charset(s[i], set)
-			&& (ft_check_charset(s[i + 1], set) || s[i + 1] == '\0'))
-			return (counter);
-		else
-			counter++;
+		counter++;
 		i++;
 	}
 	return (counter);
