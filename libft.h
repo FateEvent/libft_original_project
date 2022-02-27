@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:19:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 18:59:05 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/27 13:07:22 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,25 +64,5 @@ void	ft_putnbr_fd(int nb, int fd);
 
 // Bonus functions
 
-void	*ft_memalloc(size_t size);
-char	*ft_strcpy(char *dest, const char *src);
-char	*ft_strncpy(char *dest, const char *src, size_t n);
-char	*ft_strcat(char *dest, const char *src);
-char	*ft_strncat(char *dest, const char *src, size_t n);
-char	*ft_strstr(const char *haystack, const char *needle);
-int		ft_strcmp(const char *s1, const char *s2);
-void	ft_memdel(void **ap);
-char	*ft_strnew(size_t size);
-void	ft_strdel(char **as);
-void	ft_strclear(char *s);
-void	ft_striter(char *s, void (*f)(char *));
-char	*ft_strmap(char const *s, char (*f)(char));
-int		ft_strequ(const char *s1, const char *s2);
-int		ft_strnequ(const char *s1, const char *s2, size_t n);
-void	ft_putchar(char c);
-void	ft_putstr(char const *str);
-void	ft_putendl(char const *s);
-void	ft_putnbr(int nb);
-int		ft_isspace(int c);
 
 #endif

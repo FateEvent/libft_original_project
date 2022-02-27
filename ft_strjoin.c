@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 10:49:11 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/23 19:23:28 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/27 13:06:17 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,37 @@
 */
 
 #include "libft.h"
+
+static char	*ft_strcat(char *dest, const char *src)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = ft_strlen(dest);
+	while (src[i] != '\0')
+	{
+		dest[j] = src[i];
+		i++;
+		j++;
+	}
+	dest[j] = '\0';
+	return (dest);
+}
+
+static char	*ft_strcpy(char *dest, const char *src)
+{
+	size_t	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
