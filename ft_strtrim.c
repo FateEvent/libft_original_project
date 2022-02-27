@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 23:31:36 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/27 18:09:39 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/27 18:13:07 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static char	*ft_trim_and_copy(char *dest, const char *src, const char *set)
 		i++;
 	while (src[len] && ft_check_charset(src[len], set))
 		len--;
-	while (i < len)
+	while (i <= len)
 	{
 		dest[j] = src[i];
 		j++;
@@ -73,7 +73,7 @@ static size_t	ft_trim_and_count(const char *s, const char *set)
 		i++;
 	while (s[len] && ft_check_charset(s[len], set))
 		len--;
-	while (i < len)
+	while (i <= len)
 	{
 		counter++;
 		i++;

@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 23:31:36 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 19:12:16 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/27 18:21:14 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,47 +26,43 @@
 
 static char	*ft_trim_and_copy(char *dest, char const *src)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	j;
+	int	len;
 
 	i = 0;
 	j = 0;
+	len = ft_strlen(src) - 1;
 	while (src[i] && (src[i] == ' ' || src[i] == '\n' || src[i] == '\t'))
 		i++;
-	while (src[i] != '\0')
+	while (src[len] && (src[len] == ' ' || src[len] == '\n' || src[len] == '\t'))
+		len--;
+	while (i <= len)
 	{
-		if ((src[i] == ' ' || src[i] == '\n' || src[i] == '\t')
-			&& (src[i + 1] == ' ' || src[i + 1] == '\n' || src[i + 1] == '\t'
-				|| src[i + 1] == '\0'))
-		{
-			dest[j] = '\0';
-			return (dest);
-		}
-		else
-			dest[j] = src[i];
+		dest[j] = src[i];
 		j++;
 		i++;
 	}
+	dest[j] = '\0';
 	return (dest);
 }
 
 static size_t	ft_trim_and_count(char const *s)
 {
-	size_t	i;
-	size_t	counter;
+	int	i;
+	int	counter;
+	int	len;
 
 	i = 0;
 	counter = 0;
+	len = ft_strlen(s) - 1;
 	while (s[i] && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
 		i++;
-	while (s[i] != '\0')
+	while (s[len] && (s[len] == ' ' || s[len] == '\n' || s[len] == '\t'))
+		len--;
+	while (i <= len)
 	{
-		if ((s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-			&& (s[i + 1] == ' ' || s[i + 1] == '\n' || s[i + 1] == '\t'
-				|| s[i + 1] == '\0'))
-			return (counter);
-		else
-			counter++;
+		counter++;
 		i++;
 	}
 	return (counter);
