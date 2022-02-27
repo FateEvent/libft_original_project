@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:28:54 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 11:25:04 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/27 19:21:12 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,15 @@ static char	*ft_rev_str(char *res)
 	return (res);
 }
 
+static void	write_zeroes(char *res, int n)
+{
+	if (n == 0)
+	{
+		res[0] = '0';
+		res[1] = '\0';
+	}
+}
+
 char	*ft_itoa(int n)
 {
 	int			i;
@@ -66,6 +75,8 @@ char	*ft_itoa(int n)
 	x = (long) n;
 	len = len_calculator(n);
 	res = (char *)malloc(sizeof(char) * (len + 1));
+	if (!res)
+		return (NULL);
 	if (n < 0)
 		x = -x;
 	while (i < len_calculator(n) && x != 0)
@@ -77,5 +88,6 @@ char	*ft_itoa(int n)
 		res[i++] = '-';
 	res[i] = '\0';
 	ft_rev_str(res);
+	write_zeroes(res, n);
 	return (res);
 }
