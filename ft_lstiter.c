@@ -6,9 +6,14 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 10:05:18 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/28 10:40:51 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:19:03 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** The ft_lstiter() function iterates in the list passed as a parameter
+** and applies the f function to the content of every element.
+*/
 
 #include "libft.h"
 

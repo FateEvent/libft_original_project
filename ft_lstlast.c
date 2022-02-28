@@ -6,10 +6,14 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:52:37 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/27 19:54:33 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 13:58:37 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_lstlast() function returns the last element of the list passed
+** as a parameter.
+*/
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)

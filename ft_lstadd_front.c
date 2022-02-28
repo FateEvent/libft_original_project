@@ -6,9 +6,14 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:19:24 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/28 10:14:44 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:16:21 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** The ft_lstadd_front() function adds the new element at the head of
+** the list passed as a parameter.
+*/
 
 #include "libft.h"
 
