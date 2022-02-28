@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 10:44:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/28 15:50:06 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 16:48:40 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,28 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	lst_len;
 	t_list	*new_lst;
-	t_list	*list_ptr;
+	t_list	*new_elem;
 
-	lst_len = ft_lstsize(lst);
-	new_lst = (t_list *)malloc(sizeof(t_list) * (lst_len + 1));
-	if (!new_lst)
+	new_elem = ft_lstnew(f(lst->content));
+	if (!new_elem)
+	{
+		ft_lstclear(&lst, del);
 		return (NULL);
-	list_ptr = new_lst;
+	}
+	new_lst = new_elem;
+	lst = lst->next;
 	while (lst != NULL)
 	{
-		new_lst->content = malloc(sizeof(lst->content));
-		if (!new_lst->content)
+		new_elem = ft_lstnew(f(lst->content));
+		if (!new_elem)
 		{
-			ft_lstclear(&list_ptr, del);
+			ft_lstclear(&lst, del);
+			ft_lstclear(&new_lst, del);
+			break ;
 		}
-		new_lst->content = f(lst->content);
 		lst = lst->next;
-		new_lst = new_lst->next;
+		ft_lstadd_back(&new_lst, new_elem);
 	}
-	new_lst = NULL;
 	return (new_lst);
 }
