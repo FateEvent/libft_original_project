@@ -6,12 +6,12 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:28:54 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/27 19:21:12 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 10:48:45 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The ft_itoa() function allocates (with malloc(3)) and returns
+** The itoa() function allocates (with malloc(3)) and returns
 ** a "fresh" null-terminated string representing the integer n
 ** passed as parameter. Negative numbers are to be managed. If
 ** the allocation fails, the function returns NULL.

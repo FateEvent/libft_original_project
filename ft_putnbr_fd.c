@@ -6,12 +6,12 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 10:35:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 11:26:36 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 10:49:21 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The putnbr_fd() function writes an integer on the file descriptor.
+** The ft_putnbr_fd() function writes an integer on the file descriptor.
 */
 
 #include "libft.h"

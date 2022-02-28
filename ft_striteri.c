@@ -6,15 +6,15 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 18:04:52 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/25 17:57:13 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 10:49:55 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The striteri() function applies the f function to every character of
+** The ft_striteri() function applies the f function to every character of
 ** the string passed as a parameter by specifying its index as the first
-** argument. Every character is passed by address to the f function so
-** that it may be modified if necessary.
+** argument. Every character is passed by address to the f function so that
+** it may be modified if necessary.
 */
 
 #include "libft.h"

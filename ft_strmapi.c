@@ -6,12 +6,12 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 17:56:31 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/27 19:38:34 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 10:50:24 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** The ft_strmap() function applies the f function to every character of
+** The ft_strmapi() function applies the f function to every character of
 ** the string passed as a parameter by precising its index in order to
 ** create a new "fresh" string (with malloc(3)) resulting from the
 ** successive applications of f.
