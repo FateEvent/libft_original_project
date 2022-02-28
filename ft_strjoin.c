@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 10:49:11 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/28 15:27:31 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 15:58:17 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ static char	*ft_strcat(char *dest, const char *src)
 	size_t	j;
 
 	i = 0;
+	if (!dest || !src)
+		return (NULL);
 	j = ft_strlen(dest);
 	while (src[i] != '\0')
 	{
@@ -43,6 +45,8 @@ static char	*ft_strcpy(char *dest, const char *src)
 	size_t	i;
 
 	i = 0;
+	if (!dest || !src)
+		return (NULL);
 	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
@@ -58,6 +62,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	size_t	s1_len;
 	size_t	s2_len;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	if (s1_len == 0 && s2_len == 0)

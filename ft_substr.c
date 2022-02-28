@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 12:06:45 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/28 15:15:17 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 15:55:34 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	if (start >= ft_strlen(s))
 	{
 		substr = (char *)malloc(sizeof(char) * 1);

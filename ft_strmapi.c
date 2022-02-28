@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 17:56:31 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/28 10:50:24 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 15:51:56 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	len = ft_strlen(s);
 	str = malloc(sizeof(char) * (len + 1));
-	if (!str)
+	if (!str || !s || !f)
 		return (NULL);
 	while (s[i] && s[i] != '\0')
 	{
