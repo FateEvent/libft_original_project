@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 10:44:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/28 10:54:34 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 11:44:59 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,23 @@
 
 #include "libft.h"
 
+
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+	size_t	lst_len;
+	t_list	*new_lst;
+
+	lst_len = ft_lstsize(lst);
+	new_lst = (t_list *)malloc(sizeof(t_list) * (lst_len + 1));
 	if (!lst || !f)
-		return ;
+		return (NULL);
 	while (lst != NULL)
 	{
-		f(lst->content);
+		new_lst->content = f(lst->content);
 		lst = lst->next;
+		new_lst = new_lst->next;
 	}
+	new_lst = NULL;
+	return (new_lst);
 }
