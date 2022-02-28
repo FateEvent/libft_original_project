@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 23:31:36 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/27 18:13:07 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 16:57:59 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,8 @@ char	*ft_strtrim(const char *s, const char *set)
 	char	*copy;
 	size_t	len;
 
+	if (!s || !set)
+		return (NULL);
 	len = ft_trim_and_count(s, set);
 	copy = (char *)malloc(sizeof(char) * (len + 1));
 	if (copy == NULL)

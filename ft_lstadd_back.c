@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:52:37 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/28 14:20:47 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 17:08:58 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
 
-	current = ft_lstlast(*lst);
-	if (current == NULL || lst == NULL || *lst == NULL)
-		return ;
-	current->next = new;
-	new->next = NULL;
+	if (lst)
+	{
+		current = ft_lstlast(*lst);
+		current->next = new;
+		new->next = NULL;
+	}
 }
