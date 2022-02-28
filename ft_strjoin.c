@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 10:49:11 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/27 13:06:17 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 15:27:31 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	if (s1_len == 0 && s2_len == 0)
 	{
 		str = (char *)malloc(sizeof(char) * 1);
+		if (str == NULL)
+			return (NULL);
 		str[0] = '\0';
 		return (str);
 	}

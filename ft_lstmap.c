@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 10:44:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/28 14:44:13 by faventur         ###   ########.fr       */
+/*   Updated: 2022/02/28 15:16:43 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	lst_len = ft_lstsize(lst);
 	new_lst = (t_list *)malloc(sizeof(t_list) * (lst_len + 1));
-	if (!new_lst || !lst || !f)
+	if (!new_lst)
 		return (NULL);
 	list_ptr = new_lst;
 	while (lst != NULL)
 	{
 		new_lst->content = malloc(sizeof(lst->content));
-		if (!new_lst->content)
-			ft_lstclear(&new_lst, del);
 		new_lst->content = f(lst->content);
+		if (!new_lst->content)
+			ft_lstclear(&list_ptr, del);
 		lst = lst->next;
 		new_lst = new_lst->next;
 	}
