@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 14:41:05 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 18:49:29 by faventur         ###   ########.fr       */
+/*   Updated: 2022/03/01 11:48:09 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,15 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	if (src < dst)
 	{
 		while (n--)
-		((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
+			((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
 	}
 	else
 	{
-		while (i++ < n)
-			*(unsigned char *)dst++ = *(unsigned char *)src++;
+		while (i < n)
+		{
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
 	}
 	return (dst);
 }
