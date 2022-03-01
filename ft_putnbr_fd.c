@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 10:35:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/28 10:49:21 by faventur         ###   ########.fr       */
+/*   Updated: 2022/03/01 18:17:54 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	if (fd < 0 || fd > 2)
-		return ;
-	else
+	if (fd >= 0)
 	{
 		if (nb == -2147483648)
 			write(fd, "-2147483648", 11);
