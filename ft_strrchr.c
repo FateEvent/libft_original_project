@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr_var.c                                   :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 14:42:55 by faventur          #+#    #+#             */
-/*   Updated: 2022/02/26 19:28:06 by faventur         ###   ########.fr       */
+/*   Updated: 2022/03/02 13:54:56 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,16 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int	len;
+	char	*charptr;
 
-	len = ft_strlen(str);
-	while (len >= 0)
+	charptr = NULL;
+	while (*str != '\0')
 	{
-		if (str[len] == c)
-			return ((char *)str + len);
-		else
-			len--;
+		if (*str == (const char)c)
+			charptr = (char *)str;
+		str++;
 	}
-	return (NULL);
+	if ((*str) == (const char)c)
+		charptr = (char *)str;
+	return (charptr);
 }
