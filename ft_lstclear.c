@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 09:53:37 by faventur          #+#    #+#             */
-/*   Updated: 2022/03/02 12:16:25 by faventur         ###   ########.fr       */
+/*   Updated: 2022/03/02 12:35:10 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,15 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
+	t_list	*current;
+
 	if (!lst || !*lst || !del)
 		return ;
-	while (*lst != NULL)
+	current = *lst;
+	while (current)
 	{
-		ft_lstdelone(*lst, del);
-		*lst = (*lst)->next;
+		ft_lstdelone(current, del);
+		current = current->next;
 	}
-	lst = NULL;
+	*lst = NULL;
 }
