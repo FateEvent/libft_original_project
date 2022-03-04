@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 09:53:37 by faventur          #+#    #+#             */
-/*   Updated: 2022/03/04 10:20:29 by faventur         ###   ########.fr       */
+/*   Updated: 2022/03/04 10:38:52 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(current, del);
 		current = current->next;
 	}
-	lst = NULL;
+	*lst = NULL;
 }
