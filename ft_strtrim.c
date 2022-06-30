@@ -46,9 +46,9 @@ static char	*ft_trim_and_copy(char *dest, const char *src, const char *set)
 	i = 0;
 	j = 0;
 	len = ft_strlen(src) - 1;
-	while (src[i] && ft_check_charset(src[i], set))
+	while (src[i] && ft_check_charset(src[i], set) && i < len)
 		i++;
-	while (src[len] && ft_check_charset(src[len], set))
+	while (src[len] && ft_check_charset(src[len], set) && i < len)
 		len--;
 	while (i <= len)
 	{
@@ -69,9 +69,9 @@ static size_t	ft_trim_and_count(const char *s, const char *set)
 	i = 0;
 	counter = 0;
 	len = ft_strlen(s) - 1;
-	while (s[i] && ft_check_charset(s[i], set))
+	while (s[i] && ft_check_charset(s[i], set) && i < len)
 		i++;
-	while (s[len] && ft_check_charset(s[len], set))
+	while (s[len] && ft_check_charset(s[len], set) && i < len)
 		len--;
 	while (i <= len)
 	{

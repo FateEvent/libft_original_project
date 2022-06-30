@@ -12,9 +12,9 @@
 
 /*
 ** The ft_lstclear() function suppresses and frees the memory of the
-** the element passed as a parameter and of all the following elements
-** by using the del function and free(3). Finally, the initial pointer
-** is to be set to NULL.
+** element passed as a parameter and of all the following elements by
+** using the del function and free(3). Finally, the initial pointer is
+** to be set to NULL.
 */
 
 #include "libft.h"
