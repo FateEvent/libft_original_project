@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 10:44:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/11/19 15:55:30 by faventur         ###   ########.fr       */
+/*   Updated: 2022/11/19 16:42:31 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (temp == NULL)
 		{
 			ft_lstclear(&new_lst, del);
-			break ;
+			return (NULL);
 		}
 		ft_lstadd_back(&new_lst, temp);
 		lst = lst->next;
