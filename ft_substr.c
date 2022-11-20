@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 12:06:45 by faventur          #+#    #+#             */
-/*   Updated: 2022/03/09 11:40:22 by faventur         ###   ########.fr       */
+/*   Updated: 2022/11/20 18:47:07 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,17 @@
 
 #include "libft.h"
 
+static char	*ft_malloc(char *str, unsigned start, size_t len, size_t size)
+{
+	if (size - start < len)
+		str = (char *)malloc(sizeof(char) * (size - start + 1));
+	else
+		str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	return (str);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
@@ -29,9 +40,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	s_len = ft_strlen(s);
+	substr = NULL;
 	if (!s)
 		return (NULL);
-	if (start > s_len)
+	if (start > s_len || len == 0
+		|| s[0] == '\0')
 	{
 		substr = (char *)malloc(sizeof(char) * 1);
 		if (substr == NULL)
@@ -39,7 +52,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		substr[0] = '\0';
 		return (substr);
 	}
-	substr = (char *)malloc(sizeof(char) * (s_len - start + 1));
+	substr = ft_malloc(substr, start, len, s_len);
 	if (substr == NULL)
 		return (NULL);
 	while (i < len && s[start] != '\0')
