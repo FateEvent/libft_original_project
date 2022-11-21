@@ -6,7 +6,7 @@
 /*   By: faventur <faventur@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:19:34 by faventur          #+#    #+#             */
-/*   Updated: 2022/03/01 11:59:41 by faventur         ###   ########.fr       */
+/*   Updated: 2022/11/21 10:38:10 by faventur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,16 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+
+typedef struct s_split
+{
+	size_t	i;
+	size_t	j;
+	size_t	k;
+	size_t	tab_size;
+	size_t	str_len;
+	char	**strtab;
+}					t_split;
 
 typedef struct s_list
 {
@@ -71,5 +81,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// Utils
+char	**ft_arr_freer_index(char **arr, size_t *index);
 
 #endif
