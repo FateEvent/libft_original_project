@@ -1,5 +1,7 @@
 # Libft (Original Version)
 
+![alt text](varia/img/image.png)
+
 Libft is the first project of the 42 school cursus.
 The goal of this project: let us recreate a basic library of functions for the C language projects.
 Making students recreate basic functions allows them to understand how basic functions work and how they are implemented, but they are also encouraged to create a toolbox library for their projects in C.
